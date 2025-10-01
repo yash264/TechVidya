@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { cn } from "../Helpers/utils";
+import { cn } from "../utils";
 import { motion } from "motion/react";
 
 export const Meteors = ({ className }) => {

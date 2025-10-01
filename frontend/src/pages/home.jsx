@@ -1,24 +1,30 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
-import Banner from '../Components/Banner';
-import RoadMap from '../Components/RoadMap';
-import Features from '../Components/Features';
-import About from "../Components/About";
+import Navbar from '../Components/Home/Navbar';
+import Banner from '../Components/Home/Banner';
+import Features from '../Components/Home/Features';
+import TopicSelection from '../Components/Home/TopicSelection';
+import About from "../Components/Home/About";
 
 function Home() {
   return (
     <>
       <Navbar />
 
-      <Banner />
+      <section id="home">
+        <Banner />
+      </section>
 
-      <RoadMap />
+      <section id="features">
+        <Features />
+      </section>
 
-      <Features />
+      <section id="topicSelection">
+        <TopicSelection />
+      </section>
 
-      {/* <section id="about"> */}
+      <section id="about">
         <About />
-      {/* </section> */}
+      </section>
     </>
   );
 }

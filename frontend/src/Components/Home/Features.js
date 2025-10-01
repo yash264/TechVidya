@@ -7,7 +7,7 @@ import {
     IconShield
 } from '@tabler/icons-react';
 
-const RoadMap = () => {
+const Features = () => {
 
     const journey = [
         {
@@ -97,4 +97,4 @@ const RoadMap = () => {
     );
 };
 
-export default RoadMap;
+export default Features;

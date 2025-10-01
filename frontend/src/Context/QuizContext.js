@@ -1,0 +1,16 @@
+import React, { createContext, useState } from "react";
+
+export const QuizContext = createContext < any > (null);
+
+export const QuizProvider = ({ children }) => {
+    const [questions, setQuestions] = useState([]);
+    const [answers, setAnswers] = useState({});
+    const [topic, setTopic] = useState("");
+    const [loading, setLoading] = useState(false);
+
+    return (
+        <QuizContext.Provider value={{ questions, setQuestions, answers, setAnswers, topic, setTopic, loading, setLoading }}>
+            {children}
+        </QuizContext.Provider>
+    );
+};

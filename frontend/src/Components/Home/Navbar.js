@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { Menu, MenuItem } from "../Layouts/MenuItem";
-import { cn } from "../Helpers/utils";
+import { Menu, MenuItem } from "../../Helpers/MenuItem";
+import { cn } from "../../utils";
 
 function Navbar({ className }) {
     const [active, setActive] = useState(null);
@@ -28,7 +28,7 @@ function Navbar({ className }) {
                 <MenuItem setActive={setActive} onClick={() => handleScroll("features")} active={active} item="Features">
                 </MenuItem>
 
-                <MenuItem setActive={setActive} onClick={() => handleScroll("model")} active={active} item="Model">
+                <MenuItem setActive={setActive} onClick={() => handleScroll("topicSelection")} active={active} item="Topics Selection">
                 </MenuItem>
 
                 <MenuItem setActive={setActive} onClick={() => handleScroll("about")} active={active} item="About">
