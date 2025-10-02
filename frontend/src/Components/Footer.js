@@ -4,7 +4,7 @@ import { ImLocation, ImEnvelop } from "react-icons/im";
 export default function Footer() {
     return (
         <>
-            <div className="fixed bottom-0 left-0 w-full text-white bg-black/90 text-center py-8 px-4">
+            <div className="w-full text-white bg-black/90 text-center py-8 px-4">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between">
 
                     <div className="mb-6 md:mb-0">
