@@ -1,40 +1,89 @@
 import React from "react";
+import { AiFillLinkedin, AiOutlineGithub, AiFillInstagram } from "react-icons/ai";
+import { ImLocation, ImEnvelop } from "react-icons/im";
 
 function About() {
     return (
         <>
-            <section className="bg-white lg:grid lg:h-screen lg:place-content-center">
-                <div className="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
-                    <div className="mx-auto max-w-prose text-center">
-                        <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-                            Understand user flow and
-                            <strong className="text-indigo-600"> increase </strong>
-                            conversions
-                        </h1>
+            <footer className="bg-neutral-800 dark:bg-gray-900">
+                <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 lg:pt-24">
+                    <div className="text-center">
+                        <h2 className="text-3xl font-extrabold text-sky-400 sm:text-5xl dark:text-white">
+                            Stay Connected
+                        </h2>
 
-                        <p className="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi. Natus, provident
-                            accusamus impedit minima harum corporis iusto.
-                        </p>
-
-                        <div className="mt-4 flex justify-center gap-4 sm:mt-6">
-                            <a
-                                className="inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
-                                href="#"
-                            >
-                                Get Started
-                            </a>
-
-                            <a
-                                className="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
-                                href="#"
-                            >
-                                Learn More
-                            </a>
+                        <div class="col-4 mx-auto mt-4 max-w-sm text-center text-white">
+                            <p className="flex items-center gap-2">
+                                <ImEnvelop />&nbsp; yash.20222068@mnnit.ac.in
+                            </p>
+                            <p className="flex items-center gap-2">
+                                <ImLocation />&nbsp; National Institute of Technology Prayagraj
+                            </p>
                         </div>
+
+                        <a
+                            href="#"
+                            className="mt-8 inline-block rounded-full border bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-indigo-900 hover:text-white focus:ring-3 focus:outline-hidden"
+                        >
+                            Get Started
+                        </a>
+                    </div>
+
+                    <div
+                        className="mt-16 border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24 dark:border-gray-800"
+                    >
+                        <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
+
+                            <p className="text-white text-sm transition hover:opacity-75 dark:text-white">
+                                &copy; Designed, Developed & Hosted by National Informatics Center.
+                            </p>
+                        </ul>
+
+                        <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
+
+                            <li>
+                                <a
+                                    href="#"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                    className="text-white text-2xl transition hover:opacity-75 dark:text-white"
+                                >
+                                    <span className="sr-only">LinkedIn</span>
+                                    <AiFillLinkedin />
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                    className="text-white text-2xl transition hover:opacity-75 dark:text-white"
+                                >
+                                    <span className="sr-only">Instagram</span>
+                                    <AiFillInstagram />
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                    className="text-white text-2xl transition hover:opacity-75 dark:text-white"
+                                >
+                                    <span className="sr-only">Github</span>
+                                    <AiOutlineGithub />
+
+                                </a>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </footer>
         </>
     )
 }

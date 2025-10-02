@@ -25,12 +25,12 @@ export const CategoryData = [
         category: "Health"
     },
     {
-        title: "Logic & Brain Teasers",
-        path: "logic_and_brain_teasers",
-        image: Logic,
-        icon: Pencil,
-        description: "Critical Thinking, Puzzles & Riddles",
-        category: "Teasers"
+        title: "Geography & Environment",
+        path: "geography_and_environment",
+        image: Environment,
+        icon: MapPin,
+        description: "Natural Wonders, Climate & Sustainability",
+        category: "Environment"
     },
     {
         title: "Entertainment & Media",
@@ -41,12 +41,12 @@ export const CategoryData = [
         category: "Entertainment"
     },
     {
-        title: "Geography & Environment",
-        path: "geography_and_environment",
-        image: Environment,
-        icon: MapPin,
-        description: "Natural Wonders, Climate & Sustainability",
-        category: "Environment"
+        title: "Logic & Brain Teasers",
+        path: "logic_and_brain_teasers",
+        image: Logic,
+        icon: Pencil,
+        description: "Critical Thinking, Puzzles & Riddles",
+        category: "Teasers"
     },
     {
         title: "Sports & Games",

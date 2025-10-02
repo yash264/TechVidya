@@ -1,5 +1,5 @@
 import React from "react";
-// import { BannerLogo } from "../Assets/banner";
+import { BannerLogo } from "../Assets/bannerLogo";
 
 function Introduction() {
 
@@ -25,11 +25,11 @@ function Introduction() {
                             </h2>
 
                             <p className="mt-4 text-white">
-                                VidyaVaani is an AI-driven student performance prediction and guidance system that analyzes study habits, preparation strategies, and exam stress levels to provide personalized recommendations for academic improvement.
+                                TechVidya is an interactive quiz platform designed to make learning fun, personalized, and motivating.
                             </p>
 
                             <p className="mt-4 text-white">
-                                VidyaVaani aims to revolutionize education by combining AI, psychology, and ancient knowledge to create a smarter, more focused, and empowered generation.
+                                Challenge yourself with engaging quizzes, track your performance in real-time, and receive AI-powered motivational feedback after every attempt.
                             </p>
 
                             <div className="mt-4 flex justify-center gap-4 sm:mt-6">
@@ -45,7 +45,7 @@ function Introduction() {
 
                     <div>
 
-                        {/* <BannerLogo /> */}
+                        <BannerLogo />
 
                     </div>
 

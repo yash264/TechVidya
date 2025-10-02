@@ -9,29 +9,29 @@ import {
 
 const Features = () => {
 
-    const journey = [
+    const features = [
         {
-            year: "2021",
-            title: "Foundation",
-            description: "Enactus MNNIT was established with a vision to create positive social impact",
+            theme: "Interactive UI",
+            title: "Seamless user experience",
+            description: "Navigate easily, have progress bar and works across devices.",
             icon: IconStar
         },
         {
-            year: "2022",
-            title: "First Projects",
-            description: "Launched our initial community development and sustainability projects",
+            theme: "AI-Powered Quiz",
+            title: "Real time quiz generation",
+            description: "Always fresh and engaging quizzes covering diverse topics.",
             icon: IconLeaf
         },
         {
-            year: "2023",
-            title: "Expansion",
-            description: "Expanded our reach and developed partnerships with local organizations",
+            theme: "Smart Results",
+            title: "Provide personalized Feedback",
+            description: "Detailed result breakdown and gives motivational, custom feedback.",
             icon: IconTrendingUp
         },
         {
-            year: "2024",
-            title: "Innovation",
-            description: "Pioneered technology-driven solutions for social challenges",
+            theme: "Persistent Progress",
+            title: "Reliable experience",
+            description: "Saves quiz data, so refreshing the page won’t lose progress.",
             icon: IconShield
         }
     ];
@@ -39,7 +39,7 @@ const Features = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
 
-            {/* Journey Timeline */}
+            {/* features Timeline */}
             <div className="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
                 <div className="container mx-auto px-4">
                     <motion.div
@@ -50,10 +50,10 @@ const Features = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            Our <span className="text-yellow-600">Journey</span>
+                            Our <span className="text-yellow-600">Features</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            From humble beginnings to making a significant impact in our community
+                            🎓 Sharpen Your Mind with AI-Assisted Quizzes!!
                         </p>
                     </motion.div>
 
@@ -62,7 +62,7 @@ const Features = () => {
                         <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-yellow-400 to-orange-500 rounded-full"></div>
 
                         <div className="space-y-12">
-                            {journey.map((item, index) => (
+                            {features.map((item, index) => (
                                 <motion.div
                                     key={index}
                                     initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -81,7 +81,7 @@ const Features = () => {
                                     <div className={`w-full md:w-5/12 ml-24 md:ml-0 ${index % 2 === 0 ? 'md:text-right md:pr-16' : 'md:pl-16'
                                         }`}>
                                         <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                                            <div className="text-2xl font-bold text-yellow-600 mb-2">{item.year}</div>
+                                            <div className="text-2xl font-bold text-yellow-600 mb-2">{item.theme}</div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                                             <p className="text-gray-600">{item.description}</p>
                                         </div>

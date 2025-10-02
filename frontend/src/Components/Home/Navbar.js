@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import { Menu, MenuItem } from "../../Helpers/MenuItem";
 import { cn } from "../../utils";

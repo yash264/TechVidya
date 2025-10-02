@@ -35,7 +35,7 @@ export const QuizTopics = ({ title, path, image, icon: Icon, description, catego
                     {/* Hover Arrow */}
                     <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/20">
-                            <ArrowRight className="w-5 h-5 text-white" />
+                            <ArrowRight className="w-5 h-5 text-green-400" />
                         </div>
                     </div>
                 </div>
@@ -48,12 +48,12 @@ export const QuizTopics = ({ title, path, image, icon: Icon, description, catego
                             <Icon className="h-5 w-5 text-white" />
                         </div>
                         <div className="flex-1">
-                            <p className="text-sm font-medium text-gray-300">{description}</p>
+                            <p className="text-sm font-medium text-blue-400">{description}</p>
                         </div>
                     </div>
 
                     {/* Title */}
-                    <h2 className="text-xl md:text-2xl font-bold text-white leading-tight mb-4">
+                    <h2 className="text-xl md:text-2xl font-bold text-rose-400 leading-tight mb-4">
                         {title}
                     </h2>
 

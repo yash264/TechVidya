@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSearchParams } from "react-router-dom";
+import Header from '../Components/Header';
 import QuizCard from '../Components/StartTest/QuizCard';
 import Instructions from '../Components/StartTest/Instructions';
 import { fetchQuizQuestions } from "../ExternalAPI/AiService";
@@ -46,6 +47,8 @@ function StartTest() {
 
   return (
     <>
+      <Header />
+
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
