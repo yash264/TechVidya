@@ -1,10 +1,17 @@
 import React from 'react';
-// import Section from '../Components/StartTest/Section';
+import Result from '../Components/Analysis/Result';
+import Footer from '../Components/Footer';
 
 function Analysis() {
   return (
     <>
-      {/* <Section /> */}
+      <section>
+        <div className="w-3/4 mx-auto px-4 py-8 sm:px-6 lg:px-8">
+          <Result />
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 }

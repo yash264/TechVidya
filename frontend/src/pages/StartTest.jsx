@@ -21,8 +21,9 @@ function StartTest() {
 
   const category = categoryMap[path];
 
-  const loadQuestions = async (category) => {
+  const loadQuestions = async () => {
     try {
+      console.log(category);
       // Fetch questions from API
       const response = await fetchQuizQuestions(category);
 
