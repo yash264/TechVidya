@@ -19,7 +19,7 @@ export const BannerLogo = () => {
                         ease: "easeInOut"
                     }}
                     source="https://undraw.co/"
-                    className="mx-auto hidden max-w-sm text-gray-400 md:block dark:text-white"
+                    className="mx-auto w-full max-w-xs sm:max-w-sm text-gray-400"
                 >
                     <g id="Group_83" data-name="Group 83" transform="translate(-519.736 -95.892)">
                         <path id="Path_1317-180" data-name="Path 1317" d="M1017,290.71V500.618c0,171.111-138.711,309.815-309.814,309.806H137V600.516c0-112.167,59.614-210.421,148.9-264.789A307.506,307.506,0,0,1,334.249,311.8a304.183,304.183,0,0,1,30.182-10.007c.2-.066.409-.124.608-.171q4.533-1.24,9.123-2.338c.171-.047.333-.086.5-.124a309.914,309.914,0,0,1,57.466-8.106c2.29-.1,4.581-.19,6.89-.238.827-.029,1.663-.048,2.509-.048q2.623-.057,5.274-.057Z" transform="translate(382.736 97.691)" />

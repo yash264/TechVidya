@@ -15,7 +15,7 @@ function Introduction() {
 
     return (
         <section>
-            <div className="max-w-lg md:max-w-none text-center">
+            <div className="max-w-lg md:max-w-none text-center pt-8">
                 <h2 className="text-3xl font-extrabold text-sky-400 sm:text-5xl dark:text-white">
                     Welcome to TechVidya
                 </h2>
