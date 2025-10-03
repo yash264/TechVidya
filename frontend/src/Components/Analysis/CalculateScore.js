@@ -1,12 +1,16 @@
 
-// Get the selected answer text from a question object
+
 export const getSelectedText = (q) => {
     const indexKeys = ["selectedIndex", "selectedIdx", "chosenIndex", "userAnswerIndex"];
+
     for (const k of indexKeys) {
-        if (typeof q[k] === "number" && Array.isArray(q.options)) return q.options[q[k]];
+        if (typeof q[k] === "number" && Array.isArray(q.options)) {
+            return q.options[q[k]];
+        }
     }
 
     const textKeys = ["selected", "userAnswer", "givenAnswer", "chosen", "choice", "answerGiven"];
+
     for (const k of textKeys) {
         if (q[k] !== undefined && q[k] !== null) {
             return typeof q[k] === "number" && Array.isArray(q.options) ? q.options[q[k]] : String(q[k]);
@@ -16,14 +20,16 @@ export const getSelectedText = (q) => {
     return undefined;
 };
 
-// Get the correct answer text from a question object
+
 export const getCorrectText = (q) => {
-    if (typeof q.answer === "number" && Array.isArray(q.options)) return q.options[q.answer];
+    if (typeof q.answer === "number" && Array.isArray(q.options)) {
+        return q.options[q.answer];
+    }
     return q.answer !== undefined && q.answer !== null ? String(q.answer) : undefined;
 };
 
-// Calculate overall score and stats
-export const calculateScore = (questions) => {
+
+const calculateScore = (questions) => {
     let score = 0, correctCount = 0, wrongCount = 0, unattempted = 0;
 
     questions.forEach((q) => {
@@ -46,3 +52,5 @@ export const calculateScore = (questions) => {
 
     return { score, correctCount, wrongCount, unattempted, maxScore, percent };
 };
+
+export default calculateScore;

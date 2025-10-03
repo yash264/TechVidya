@@ -24,26 +24,27 @@ function StartTest() {
 
   const loadQuestions = async () => {
     try {
-      console.log(category);
-      // Fetch questions from API
+      localStorage.removeItem("techVidya");
+
       const response = await fetchQuizQuestions(category);
 
-      // Assuming response is already JSON. If not, use: const data = await response.json();
       const data = response;
 
-      // Store in localStorage as string
-      localStorage.setItem('quizQuestions', JSON.stringify(data?.questions || []));
-
-      console.log("Questions stored in localStorage");
-    }
-    catch (error) {
-      console.error('Failed to load questions:', error);
+      if(data?.questions && data.questions.length > 0){
+        localStorage.setItem("techVidya", JSON.stringify(data.questions));
+      } 
+      else{
+        console.warn("No questions returned from API");
+      }
+    } 
+    catch(error){
+      console.error(error);
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     loadQuestions();
-  },[]);
+  }, []);
 
   return (
     <>

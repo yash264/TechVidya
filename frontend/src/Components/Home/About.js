@@ -50,7 +50,6 @@ function About() {
                                 >
                                     <span className="sr-only">LinkedIn</span>
                                     <AiFillLinkedin />
-
                                 </a>
                             </li>
 
@@ -63,7 +62,6 @@ function About() {
                                 >
                                     <span className="sr-only">Instagram</span>
                                     <AiFillInstagram />
-
                                 </a>
                             </li>
 
@@ -76,7 +74,6 @@ function About() {
                                 >
                                     <span className="sr-only">Github</span>
                                     <AiOutlineGithub />
-
                                 </a>
                             </li>
 

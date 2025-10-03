@@ -7,8 +7,8 @@ import {
     IconShield
 } from '@tabler/icons-react';
 
-const Features = () => {
 
+const Features = () => {
     const features = [
         {
             theme: "Interactive UI",
@@ -39,9 +39,9 @@ const Features = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
 
-            {/* features Timeline */}
             <div className="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
                 <div className="container mx-auto px-4">
+
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,6 @@ const Features = () => {
                     </motion.div>
 
                     <div className="relative">
-                        {/* Timeline Line */}
                         <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-yellow-400 to-orange-500 rounded-full"></div>
 
                         <div className="space-y-12">
@@ -72,18 +71,22 @@ const Features = () => {
                                     className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                                         }`}
                                 >
-                                    {/* Timeline Node */}
                                     <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg z-10">
                                         <item.icon className="w-8 h-8 text-white" />
                                     </div>
 
-                                    {/* Content */}
                                     <div className={`w-full md:w-5/12 ml-24 md:ml-0 ${index % 2 === 0 ? 'md:text-right md:pr-16' : 'md:pl-16'
                                         }`}>
                                         <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                                            <div className="text-2xl font-bold text-yellow-600 mb-2">{item.theme}</div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                                            <p className="text-gray-600">{item.description}</p>
+                                            <div className="text-2xl font-bold text-yellow-600 mb-2">
+                                                {item.theme}
+                                            </div>
+                                            <h3 className="text-xl font-bold text-gray-900 mb-3">
+                                                {item.title}
+                                            </h3>
+                                            <p className="text-gray-600">
+                                                {item.description}
+                                            </p>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -92,7 +95,6 @@ const Features = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };

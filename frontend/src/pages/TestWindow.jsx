@@ -6,15 +6,12 @@ import Footer from '../Components/Footer';
 
 
 function TestWindow() {
-
     const [questions, setQuestions] = useState([]);
 
     useEffect(() => {
-        // Fetch from localStorage when component mounts
-        const storedQuestions = localStorage.getItem("quizQuestions");
+        const storedQuestions = localStorage.getItem("techVidya");
 
         if (storedQuestions) {
-            // Parse the string back into an array
             setQuestions(JSON.parse(storedQuestions));
         }
     }, []);

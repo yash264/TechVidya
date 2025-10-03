@@ -28,7 +28,6 @@ const TopicSelection = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-200 via-white to-gray-100 overflow-hidden">
 
-      {/* Main Content */}
       <motion.div
         initial="hidden"
         animate="visible"
@@ -37,7 +36,6 @@ const TopicSelection = () => {
       >
         <div className="container mx-auto px-4">
 
-          {/* Header Section */}
           <motion.div
             variants={headerVariants}
             className="text-center mb-20"
@@ -59,7 +57,6 @@ const TopicSelection = () => {
             </div>
           </motion.div>
 
-          {/* Department Grid */}
           <motion.div
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
@@ -84,8 +81,8 @@ const TopicSelection = () => {
                   <QuizTopics
                     {...item}
                   />
-                  {/* Glow Effect on Hover */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition duration-500 blur-xl" />
+
+                  <div className=" rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition duration-500 blur-xl" />
                 </div>
               </motion.div>
             ))}
@@ -94,7 +91,7 @@ const TopicSelection = () => {
         </div>
       </motion.div>
     </div>
-
+    
   );
 };
 

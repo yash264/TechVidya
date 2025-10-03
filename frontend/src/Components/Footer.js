@@ -9,7 +9,7 @@ export default function Footer() {
 
                     <div className="mb-6 md:mb-0">
                         <h4 className="text-base font-semibold mb-2">
-                            © 2025 All rights reserved.
+                            © Designed, Developed & Hosted by National Informatics Center.
                         </h4>
                     </div>
 

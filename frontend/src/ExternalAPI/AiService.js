@@ -1,9 +1,8 @@
 import axios from "axios";
 
 const GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
-const GEMINI_MODEL = "gemini-2.5-flash"; // or whichever model you choose
-
-// AIzaSyAJi_XgE_ZEtFNCdipEh5-CPxQTA0YUvHw
+const GEMINI_MODEL = "gemini-2.5-flash"; 
+const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
 
 export async function fetchQuizQuestions(topic) {
     const prompt = `
@@ -35,29 +34,27 @@ export async function fetchQuizQuestions(topic) {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "x-goog-api-key": process.env.REACT_APP_GEMINI_API_KEY || "AIzaSyAJi_XgE_ZEtFNCdipEh5-CPxQTA0YUvHw"
+                    "x-goog-api-key": GEMINI_API_KEY
                 }
             }
         );
 
-        // Extract text safely
         let text = res.data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
 
-        // ✅ Remove markdown fences if present
         text = text.replace(/```json/g, "").replace(/```/g, "").trim();
 
         return JSON.parse(text);
-    } catch (err) {
-        console.error("Gemini Error:", err);
+    } 
+    catch(error){
+        console.error(error);
         return null;
     }
 }
 
-
 export async function fetchFeedback(score, total) {
     const prompt = `
             Provide a motivational feedback message for a user who scored ${score} out of ${total}. 
-            Keep it short and positive.
+            Keep it brief (2-3 line) and positive.
         `;
 
     const url = `${GEMINI_BASE}/${GEMINI_MODEL}:generateContent`;
@@ -75,15 +72,18 @@ export async function fetchFeedback(score, total) {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    "x-goog-api-key": process.env.REACT_APP_GEMINI_API_KEY || ""
+                    "x-goog-api-key": GEMINI_API_KEY
                 }
             }
         );
 
         const text = res.data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+        text = text.replace(/```json/g, "").replace(/```/g, "").trim();
+
         return text;
-    } catch (err) {
-        console.error("Gemini Feedback Error:", err);
+    } 
+    catch(error){
+        console.error(error);
         return "Good effort! Keep learning 🚀";
     }
 }
