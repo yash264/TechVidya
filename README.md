@@ -3,6 +3,11 @@
 An intelligent and interactive quiz platform powered by **AI** — designed to make learning fun and dynamic. Built using **React.js**, **Tailwind CSS**, and **Framer Motion**.  
 
 ---
+## 🧠 Problem Understanding
+
+The goal of **Tech Vidya** is to simplify online assessments through **automation and intelligent evaluation**. It provides students with a smooth testing experience and teachers with instant **AI-driven insights**.
+
+---
 
 ## Features
 
@@ -32,17 +37,37 @@ An intelligent and interactive quiz platform powered by **AI** — designed to m
 ---
   
 ## ⚙️ Architecture Overview  
-
-| Component | Description |
-|------------|-------------|
-| **External API** | Fetches real-time quiz questions dynamically from AI |
-| **CategoryData.js** | Stores category titles, icons, and images |
-| **QuizTopics.js** | Displays clickable topic cards |
-| **Instructions.js** | Shows exam rules and handles fullscreen entry |
-| **TestWindow.js** | Displays questions and manages answers |
-| **Result.js** | Calculates and displays quiz performance |
-| **LocalStorage** | Persists quiz data across sessions |
-| **Framer Motion** | Adds smooth animations and transitions |
+```bash
+Tech Vidya/
+├── public/ # Contain main index.html
+└── src/
+├── Assets/ # Application-specific assets (logos, media, etc.)
+├── Components/ # Reusable React components
+│ ├── Analysis/ # Components for test result
+│ ├── Home/ # Homepage UI components
+│ ├── StartTest/ # Components for test initiation
+│ ├── TestWindow/ # Test-taking window UI
+│ ├── Footer.js # Global footer component
+│ └── Header.js # Global header component
+│
+├── ExternalAPI/ # API integration logic
+│ └── AiService.js # Handles AI-based API calls
+│
+├── Helpers/ # Contain some additional files
+│
+├── Pages/ # Page-level React components (main views)
+│ ├── Analysis.jsx
+│ ├── Home.jsx
+│ ├── StartTest.jsx
+│ └── TestWindow.jsx
+│
+├── App.jsx # Root component
+├── index.css # Global CSS styles
+├── index.js # React entry point
+└── utils.js # Global utility functions
+├── .env # Environment variables (API keys, endpoints)
+├── .gitignore # Ignored files for Git
+```
 
 ---
 
@@ -88,6 +113,17 @@ An intelligent and interactive quiz platform powered by **AI** — designed to m
 - 🌙 Support **dark mode**
 
 ---
+## 🛠️ Installation Guide
+
+Follow these steps to set up and run the project locally:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yash264/TechVidya.git
+cd TechVidya
+npm i
+npm start
+```
 
 ## 🧑‍💻 Author  
 
