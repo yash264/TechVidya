@@ -78,7 +78,6 @@ export async function fetchFeedback(score, total) {
         );
 
         const text = res.data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
-        text = text.replace(/```json/g, "").replace(/```/g, "").trim();
 
         return text;
     } 
